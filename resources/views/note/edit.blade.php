@@ -15,7 +15,9 @@
                         <div>
                             <label for="title" class="form-label">Название</label>
                             <input value="{{old('title', $note->title)}}" type="text" class="form-control form-control-lg" id="title" name="title">
-
+                            @error('title')
+                            <p class="text-danger small mt-2">{{$message}}</p>
+                            @enderror
                         </div>
                         <div>
                             <label for="content" class="form-label">Содержание</label>
